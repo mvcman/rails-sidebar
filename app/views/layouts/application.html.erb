@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PayrollManagementSystem</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Old+Standard+TT:wght@700&family=Pacifico:wght@600&family=Orbitron:wght@600&family=Poppins:wght@600&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Ultra&display=swap" rel="stylesheet" />
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="">
+    <main class="h-screen bg-day-primary dark:bg-night-primary p-0 m-0 box-border">
+      <%= render partial: "layouts/header" %>
+      <%= render partial: "layouts/sidebar" %>
+      <div class="pt-12 md:pt-0 md:ml-60 h-full bg-day-primary dark:bg-night-secondary z-0 font-inter box-border">
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

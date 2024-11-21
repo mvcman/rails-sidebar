@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get "/statutory", to: "demo#statutory"
   get "/reimbursement_settings", to: "demo#reimbursement_settings"
 
+  get "/welcome", to: "welcome#index"
+
 
   # Defines the root path route ("/")
   root "demo#index"

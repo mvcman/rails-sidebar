@@ -12,6 +12,28 @@
   </head>
   <body class="">
     <main class="h-screen bg-day-primary dark:bg-night-primary p-0 m-0 box-border">
+      <div id="mymodal" class="absolute top-0 left-0 w-full h-full hidden z-20" data-controller="hello">
+          <%
+=begin%>
+ <div class="absolute top-1/2 left-1/2 w-200 bg-white rounded-md p-4 flex flex-col self-center z-30 -translate-x-1/2 -translate-y-1/2">
+              <h2>This is my modal</h2>
+          </div> 
+<%
+=end%>
+          <div class="tooltip hidden" id="tooltip">
+            <h2>This is my tooltip</h2>
+            <div class="flex items-end justify-between">
+              <div class="">
+                <button class="p-2" data-action="click->hello#close">close</button>
+              </div>
+              <div class="">
+                <button class="p-2" data-action="click->hello#prevStep">Prev</button>
+                <button class="p-2" data-action="click->hello#nextStep">Next</button>
+              </div>
+            </div>
+          </div>
+          <div class="spotlight" id="spotlight"></div>
+      </div>
       <%= render partial: "layouts/header" %>
       <%= render partial: "layouts/sidebar" %>
       <div class="pt-12 md:pt-0 md:ml-60 h-full bg-day-primary dark:bg-night-secondary z-0 font-inter box-border">

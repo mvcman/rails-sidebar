@@ -41,7 +41,7 @@ module.exports = {
         bgsidebar: 'rgb(7, 69, 145)',
         text: 'rgba(255, 255, 254, 0.7)',
         link: 'rgba(255, 255, 254, 0.3)',
-        
+        bghighlight: 'rgba(255, 255, 255, 0.8)'
       },
       screens: {
         sm: "770px",
@@ -71,5 +71,8 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
+    require(
+      'flowbite/plugin'
+    )
   ]
 }

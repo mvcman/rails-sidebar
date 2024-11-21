@@ -1,29 +1,20 @@
 <div class="flex flex-col space-y-1 py-8">
-    <%
-=begin%>
- <div class="px-4 overflow-hidden relative">
-        <div class="absolute w-2 rounded-md -left-1 h-full bg-golden"></div>
-        <div class="flex items-center bg-link text-white space-x-4 rounded-md px-2 py-1 text-base cursor-pointer"><span><%= raw get_svg_by_name("dashboard2") %></span><span class="font-medium">Mandar Waghe</span></div>
-    </div> 
-<%
-=end%>
-
     <%# Nav for dashboard %>
-    <div class="px-4 overflow-hidden relative">
+    <div class="px-4 overflow-hidden relative" id="first-item">
         <div class="absolute w-2 rounded-md -left-1 h-full bg-golden <%= params[:controller] == "demo" && %w(index).include?(params[:action]) ? "" : "hidden" %>"></div>
         <%= link_to root_path, class: params[:controller] == "demo" && %w(index).include?(params[:action]) ? "flex items-center space-x-4 px-2 py-1 bg-link text-white text-base rounded-md hover:bg-link hover:text-white cursor-pointer" : "flex items-center space-x-4 px-2 py-1 text-text text-base rounded-md hover:bg-link hover:text-white cursor-pointer" do %>
             <span class=""><%= raw get_svg_by_name("dashboard") %>
             </span><span class="flex-1 font-medium">Dashboard</span>
         <% end %>
     </div>
-    <div class="px-4 overflow-hidden relative">
+    <div class="px-4 overflow-hidden relative" id="second-item">
         <div class="absolute w-2 rounded-md -left-1 h-full bg-golden <%= params[:controller] == "demo" && %w(attendence).include?(params[:action]) ? "" : "hidden" %>"></div>
         <%= link_to attendence_path, class: params[:controller] == "demo" && %w(attendence).include?(params[:action]) ? "flex items-center space-x-4 px-2 py-1 bg-link text-white text-base rounded-md hover:bg-link hover:text-white cursor-pointer" : "flex items-center space-x-4 px-2 py-1 text-text text-base rounded-md hover:bg-link hover:text-white cursor-pointer" do %>
             <span class=""><%= raw get_svg_by_name("attendence") %>
             </span><span class="flex-1 font-medium">Attendence</span>
         <% end %>
     </div>
-    <div class="px-4 overflow-hidden relative">
+    <div class="px-4 overflow-hidden relative" id="third-item">
         <div class="absolute w-2 rounded-md -left-1 h-full bg-golden <%= params[:controller] == "demo" && %w(reimbursement).include?(params[:action]) ? "" : "hidden" %>"></div>
         <%= link_to reimbursement_path, class: params[:controller] == "demo" && %w(reimbursement).include?(params[:action]) ? "flex items-center space-x-4 px-2 py-1 bg-link text-white text-base rounded-md hover:bg-link hover:text-white cursor-pointer" : "flex items-center space-x-4 px-2 py-1 text-text text-base rounded-md hover:bg-link hover:text-white cursor-pointer" do %>
             <span class=""><%= raw get_svg_by_name("reimbursement") %>
@@ -112,13 +103,13 @@
                 <span class="ml-[36px] font-medium">Organization</span>
             <% end %>
         </div>
-        <div class="px-4 overflow-hidden relative">
+        <div class="px-4 overflow-hidden relative" id="fourth-item">
             <div class="submenu absolute w-2 rounded-md -left-1 h-full bg-golden <%= params[:controller] == "demo" && %w(offices).include?(params[:action]) ? "" : "hidden" %>"></div>
             <%= link_to offices_path, class: params[:controller] == "demo" && %w(offices).include?(params[:action]) ? "flex items-center space-x-4 px-2 py-1 bg-link text-white text-base rounded-md hover:bg-link hover:text-white cursor-pointer" : "flex items-center space-x-4 px-2 py-1 text-text text-base rounded-md hover:bg-link hover:text-white cursor-pointer" do %>
                 <span class="ml-[36px] font-medium">Offices</span>
             <% end %>
         </div>
-        <div class="px-4 overflow-hidden relative">
+        <div class="px-4 overflow-hidden relative" id="fifth-item">
             <div class="submenu absolute w-2 rounded-md -left-1 h-full bg-golden <%= params[:controller] == "demo" && %w(user_roles).include?(params[:action]) ? "" : "hidden" %>"></div>
             <%= link_to user_roles_path, class: params[:controller] == "demo" && %w(user_roles).include?(params[:action]) ? "flex items-center space-x-4 px-2 py-1 bg-link text-white text-base rounded-md hover:bg-link hover:text-white cursor-pointer" : "flex items-center space-x-4 px-2 py-1 text-text text-base rounded-md hover:bg-link hover:text-white cursor-pointer" do %>
                 <span class="ml-[36px] font-medium">User Roles</span>
@@ -154,7 +145,7 @@
                 <span class="ml-[36px] font-medium">Statutory Component</span>
             <% end %>
         </div>
-        <div class="px-4 overflow-hidden relative">
+        <div class="px-4 overflow-hidden relative" id="sixth-item">
             <div class="submenu absolute w-2 rounded-md -left-1 h-full bg-golden <%= params[:controller] == "demo" && %w(reimbursement_settings).include?(params[:action]) ? "" : "hidden" %>"></div>
             <%= link_to reimbursement_settings_path, class: params[:controller] == "demo" && %w(reimbursement_settings).include?(params[:action]) ? "flex items-center space-x-4 px-2 py-1 bg-link text-white text-base rounded-md hover:bg-link hover:text-white cursor-pointer" : "flex items-center space-x-4 px-2 py-1 text-text text-base rounded-md hover:bg-link hover:text-white cursor-pointer" do %>
                 <span class="ml-[36px] font-medium">Reimbursement</span>

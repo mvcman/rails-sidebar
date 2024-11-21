@@ -79,6 +79,10 @@ export default class extends Controller {
       element.classList.remove("hidden");
       localStorage.setItem(target, 'open');
       e.target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="pointer-events-none"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m17 14l-5-5l-5 5"/></svg>`;
+      e.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
     } else {
       element.classList.add("hidden");
       localStorage.setItem(target, 'close');
@@ -97,6 +101,10 @@ export default class extends Controller {
           if (!submenu.classList.contains("hidden")) {
             target.classList.remove("hidden");
             menu.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="pointer-events-none"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m17 14l-5-5l-5 5"/></svg>`;
+            submenu.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
           }
         });
       }
